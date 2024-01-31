@@ -1,0 +1,17 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: bisque;
+    color: darkgoldenrod;
+    text-shadow: 0.5px 0.5px 0.5px rgb(78, 66, 54);
+}
+
+button{
+    background-color: darkgoldenrod;
+    color: bisque;
+    border-radius: 5px;
+    border: 1px solid darkgoldenrod;
+    padding: 1em;
+    margin: 5px;
+    cursor: pointer;
+    box-shadow: 0.5px 0.5px 0.5px rgb(78, 66, 54);
+}
