@@ -7,17 +7,17 @@ function start() {
   console.log("JavaScript is running");
   number = generateRandomNumber();
     console.log(number);
+    displayGuess();
 }
 
 function generateRandomNumber() {
     return 42;
 }
 
-function displayGuess(generateRandomNumber) {
+function displayGuess() {
     console.log("displayGuess");
-    const reply = document.querySelector("#reply").value;
-    const html = `<li>Is your number: ${number}</li>`;
-    reply.insertAdjacentHTML("beforeend", html);
+    const guessElement = document.querySelector("#guess");
+    guessElement.textContent = number;
 }
 
 function checkGuess() {
