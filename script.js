@@ -1,6 +1,6 @@
 "use strict";
 
-window.addEventListener("load", start);
+/*window.addEventListener("load", start);
 let number;
 
 function start() {
@@ -34,4 +34,31 @@ function guessIsTooHigh() {
 
 function guessIsTooLow() {
     console.log("guessIsTooLow");
+}*/
+
+let lowerBound = 1;
+let upperBound = 100;
+let currentGuess = 50;
+
+function updateGuess() {
+    currentGuess = Math.floor((lowerBound + upperBound) / 2);
+    document.getElementById('guess').textContent = currentGuess;
 }
+
+function higher() {
+    lowerBound = currentGuess + 1;
+    updateGuess();
+}
+
+function lower() {
+    upperBound = currentGuess - 1;
+    updateGuess();
+}
+
+function correct() {
+    alert("Hooray! I guessed it: " + currentGuess);
+    // Reset the game or add additional functionality here if desired
+}
+
+// Initialize the first guess
+updateGuess();
